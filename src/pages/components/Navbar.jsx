@@ -75,7 +75,7 @@ const Navbar = () => {
           </Left>
 
           <Center>
-            <Logo>MOHA.</Logo>
+            <Logo>KAVANI.</Logo>
           </Center>
 
           <Right>
