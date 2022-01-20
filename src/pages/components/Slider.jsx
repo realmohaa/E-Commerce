@@ -49,11 +49,12 @@ const ImgContainer = styled.div`
 `
 
 const Image = styled.img`
-    height: 100%
+    height: 90%
+    padding-left: 10%;
 `
 
 const DetailsContainer = styled.div`
-    flex: 1;
+    flex: 2;
     padding: 50px;
 `
 
