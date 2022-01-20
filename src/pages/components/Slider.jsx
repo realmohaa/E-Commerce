@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const Container = styled.div`
     width: 100%;
-    height: 90vh;
+    height: 70vh;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -38,7 +38,7 @@ const Wrapper = styled.div`
 
 const Slide = styled.div`
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
     display: flex;
     align-items: center;
     background-color: #${props => props.bg}
@@ -49,7 +49,7 @@ const ImgContainer = styled.div`
 `
 
 const Image = styled.img`
-    height: 90%
+    height: 100%
 `
 
 const DetailsContainer = styled.div`
@@ -61,7 +61,7 @@ const Title = styled.h1`
     font-size: 70px;
 `
 const Description = styled.p`
-    margin: 50px 0px;
+    margin: 30px 0px;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 2px;
@@ -92,7 +92,7 @@ const Slider = () => {
 
         <Wrapper slideIndex={slideIndex}>
             {sliderItems.map((item) => (
-            <Slide bg={item.bg}>
+            <Slide bg={item.bg} key={item.id}>
                 <ImgContainer>
                     <Image src={item.img}/>
                 </ImgContainer>
