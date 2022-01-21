@@ -68,11 +68,20 @@ const Description = styled.p`
     letter-spacing: 2px;
 `
 const Button = styled.button`
-    padding: 12px;
-    font-size: 20px;
-    background-color: transparent;
+    padding: 15px;
+    border: 2px solid teal;
+    background-color: white;
     cursor: pointer;
+    font-weight: 500;
     border-radius: 1em;
+    background-color: transparent;
+    transition: .2s all ease-in-out;
+
+    &:hover{
+        padding: 18px;
+        font-weight: 700;
+        font-size: 14px;
+    }
 `
 
 const Slider = () => {
