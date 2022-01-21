@@ -56,6 +56,7 @@ const Filter = styled.div`
 const FilterTitle = styled.span`
   font-size: 20px;
   font-weight: 200;
+  padding: 5px
 `;
 
 const FilterColor = styled.div`
@@ -122,9 +123,9 @@ const Product = () => {
           <Announcement/>
           <Wrapper>
               <ImgContainer>
-                <Image src="https://www.buysoles.com/wp-content/uploads/2020/08/Air-Jordan-1-Mid-Edge-Glow-White-Crimson-Pink-Lemon-CV4611-100.jpg"/>
+                <Image src="https://www.bigsalemax.com/wp-content/uploads/2021/08/Air-Jordan-1-High-OG-Prototype-White-Multi-Color-Total-Orange-DC6515-100-1.jpg"/>
               </ImgContainer>
-              <DetailsContainer>
+            <DetailsContainer>
 
                     <Title>Jordans Shoes</Title>
                     <Description>
@@ -137,14 +138,12 @@ const Product = () => {
                     <Price>35 AED</Price>
 
                 <FilterContainer>
-
                     <Filter>
                         <FilterTitle>Color</FilterTitle>
                         <FilterColor color="black" />
                         <FilterColor color="darkblue" />
                         <FilterColor color="gray" />
                     </Filter>
-
                     <Filter>
                         <FilterTitle>Size</FilterTitle>
                         <FilterSize>
@@ -156,7 +155,6 @@ const Product = () => {
                         </FilterSize>
                     </Filter>
                 </FilterContainer>
-
                 <AddContainer>
                     <AmountContainer>
                         <Remove/>
@@ -165,7 +163,6 @@ const Product = () => {
                     </AmountContainer>
                     <Button>ADD TO CART</Button>
                 </AddContainer>
-
             </DetailsContainer>
           </Wrapper>
           <Newsletter/>
