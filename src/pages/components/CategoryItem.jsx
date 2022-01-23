@@ -16,7 +16,7 @@ const Image = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius:1em;
-  ${mobile({height: "25vh", objectPosition:"center center"})}
+  ${mobile({height: "22vh", objectPosition:"100% 30%"})}
 `
 const Details = styled.div`
     position: absolute;
@@ -32,6 +32,7 @@ const Details = styled.div`
 const Title = styled.h1`
     color: #FFF;
     margin-bottom: 25px;
+    ${mobile({fontSize: "22px",marginBottom: "15px"})}
 `
 const Button = styled.button`
     border: none;

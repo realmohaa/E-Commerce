@@ -3,6 +3,7 @@ import Announcement from "./components/Announcement";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Newsletter from "./components/Newsletter";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
     width:100vw;
@@ -15,9 +16,11 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     text-align: left;
+    ${mobile({ height: "40vh" })}
 `
 const FormContainer = styled.div`
     width: 30%;
+    ${mobile({ width: "80%" })}
 `
 const Title = styled.h1`
     font-size: 24px;

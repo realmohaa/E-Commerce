@@ -3,6 +3,7 @@ import Announcement from "./components/Announcement";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Newsletter from "./components/Newsletter";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
     width:100vw;
@@ -17,6 +18,7 @@ const Wrapper = styled.div`
 `
 const FormContainer = styled.div`
     width: 40%;
+    ${mobile({ width: "80%" })}
 `
 const Title = styled.h1`
     font-size: 24px;
