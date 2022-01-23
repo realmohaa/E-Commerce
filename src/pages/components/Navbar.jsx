@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Search, ShoppingCartOutlined } from '@material-ui/icons'
 import { Badge } from '@material-ui/core';
-import { mobile } from '../../responsive'
-import { red } from '@material-ui/core/colors';
+import { mobile } from '../../responsive' 
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
     height: 60px;
@@ -84,17 +84,19 @@ const Navbar = () => {
           </Left>
 
           <Center>
-            <Logo>KAVANI</Logo>
+          <Logo>KAVANI</Logo>
           </Center>
 
           <Right>
-            <MenuItem>REGISTER</MenuItem>
-            <MenuItem>LOG IN</MenuItem>
+            <Link to="/register"><MenuItem>REGISTER</MenuItem></Link>
+            <Link to="/login"><MenuItem>LOG IN</MenuItem></Link>
+            <Link to="/cart">
             <MenuItem>
               <Badge badgeContent={2} color="primary">
                 <ShoppingCartOutlined/>
               </Badge>
             </MenuItem>
+            </Link>
           </Right>
       </Wrapper>
   </Container>
