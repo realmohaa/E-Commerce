@@ -84,7 +84,7 @@ const Navbar = () => {
           </Left>
 
           <Center>
-          <Logo>KAVANI</Logo>
+          <Link to="/"><Logo>KAVANI</Logo></Link>
           </Center>
 
           <Right>
