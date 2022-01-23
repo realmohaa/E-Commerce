@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { useSpring, animated } from 'react-spring'
+import { mobile } from "../../responsive";
 
 const Container = styled(animated.div)`
   flex: 1;
   margin:6px;
   height: 70vh;
   position: relative;
+  ${mobile({margin: "2px 8px"})}
 `
 
 const Image = styled.img`
@@ -13,6 +15,7 @@ const Image = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius:1em;
+  ${mobile({height: "25vh", objectPosition:"center center"})}
 `
 const Details = styled.div`
     position: absolute;
