@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Search, ShoppingCartOutlined } from '@material-ui/icons'
+import { MenuOutlined, Search, ShoppingCartOutlined } from '@material-ui/icons'
 import { Badge } from '@material-ui/core';
-import { mobile } from '../../responsive' 
+import { mobile, tablets } from '../../responsive' 
 import { Link } from 'react-router-dom';
 
 const Container = styled.div`
     height: 60px;
-    ${mobile({height: "50px"})}
+    ${mobile({height: "40px", padding:"4px 15px"})}
 }`
 
 const Wrapper = styled.div`
@@ -36,12 +36,12 @@ const SearchContainer = styled.div`
     display: flex;
     align-items: center;
     margin-left: 25px;
-    padding: 5px;
+    padding: 8px;
+    ${mobile({display: "none"})}
 `
 
 const Input = styled.input`
     border: none;
-    ${mobile({width:"15px"})}
 `
 
 const Center = styled.div`
@@ -50,7 +50,11 @@ const Center = styled.div`
 const Logo = styled.h1`
     font-weight: bold;
     text-align: center;
-    ${mobile({fontSize: "22px"})}
+    transition: .1s all ease-in-out;
+    ${mobile({fontSize: "25px", justifyContent: "center"})};
+    &:hover{
+      transform: scale(1.12);
+    }
 `
 
 const Right = styled.div`
@@ -58,17 +62,28 @@ const Right = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    ${mobile({justifyContent: "center", flex:2})}
+    ${mobile({justifyContent: "flex-end"})}
 `
 
 const MenuItem = styled.div`
     font-size: 15px;
     cursor: pointer;
-    margin-left: 25px;
-    ${mobile({fontSize: "12px", marginLeft: "10px"})}
+    margin-right: 25px;
+    transition: .1s all ease-in-out;
+    ${mobile({fontSize: "12px", marginLeft: "10px"})};
+    ${tablets({display:"none"})};
+    &:hover{
+      transform: scale(1.12);
+      color: teal
+    }
 `
 
-const Navbar = () => {
+const Bars = styled.div`
+    display: none;
+    ${tablets({display:"block"})};
+`
+
+const Navbar = ({toggle}) => {
   return (
   <Container>
       <Wrapper>
@@ -88,15 +103,16 @@ const Navbar = () => {
           </Center>
 
           <Right>
-            <Link to="/register"><MenuItem>REGISTER</MenuItem></Link>
-            <Link to="/login"><MenuItem>LOG IN</MenuItem></Link>
-            <Link to="/cart">
+            <MenuItem><Link to="/register">REGISTER</Link></MenuItem>
+            <MenuItem><Link to="/login">LOG IN</Link></MenuItem>
             <MenuItem>
+            <Link to="/cart">
               <Badge badgeContent={2} color="primary">
                 <ShoppingCartOutlined/>
               </Badge>
-            </MenuItem>
             </Link>
+            </MenuItem>
+            <Bars onClick={toggle}><MenuOutlined/></Bars>
           </Right>
       </Wrapper>
   </Container>

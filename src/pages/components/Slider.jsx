@@ -16,7 +16,8 @@ const Container = styled.div`
 const Arrow = styled.div`
     width: 50px;
     height: 50px;
-    background-color: #FFF7F7;
+    background-color: rgba(0,128,128,.5);
+    color: #FFF;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -24,11 +25,15 @@ const Arrow = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
-    left: ${props => props.direction === "left" && "15px"}; 
-    right: ${props => props.direction === "right" && "15px"}; 
+    left: ${props => props.direction === "left" && "20px"}; 
+    right: ${props => props.direction === "right" && "20px"}; 
     margin: auto;
     cursor: pointer;
     z-index: 2;
+    transition: .2s all ease-in-out;
+    &:hover{
+        transform: scale(1.1)
+    }
 `
 
 const Wrapper = styled.div`

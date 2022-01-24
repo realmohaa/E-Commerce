@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Container = styled(animated.div)`
   flex: 1;
   margin:6px;
-  height: 70vh;
+  height: 65vh;
   position: relative;
   ${mobile({margin: "2px 8px"})}
 `

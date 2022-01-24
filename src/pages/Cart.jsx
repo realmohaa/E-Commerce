@@ -1,6 +1,5 @@
 import { Add, Remove } from "@material-ui/icons";
 import styled from "styled-components";
-import Navbar from "./components/Navbar";
 import Announcement from './components/Announcement';
 import Footer from "./components/Footer";
 import Newsletter from "./components/Newsletter";
@@ -166,7 +165,6 @@ const Button = styled.button`
 const Cart = () => {
   return (
     <Container>
-      <Navbar />
       <Announcement />
       <Wrapper>
         <Title>MY BAG</Title>

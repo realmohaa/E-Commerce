@@ -70,7 +70,7 @@ const Product = ({item}) => {
           <Image src={item.img}/>
           <Details>
               <Icon>
-                  <ShoppingCartOutlined />
+                <Link to="/cart"><ShoppingCartOutlined /></Link>
               </Icon>
 
               <Icon>
